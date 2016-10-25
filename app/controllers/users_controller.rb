@@ -5,9 +5,13 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
-    login(@user)
-    redirect_to user_path(@user.id)
+    if user_params[:password].empty?
+      redirect_to new_user_path
+    else
+      @user = User.create(user_params)
+      login(@user)
+      redirect_to user_path(@user.id)
+    end
   end
 
   def show
