@@ -1,7 +1,10 @@
 <h1>User Profile</h1>
 
-NAME:<%= @user.name %><br>
-MOOD: <%= @user.mood %><br>
-HEIGHT: <%= @user.height %><br>
-HAPPINESS: <%= @user.happiness %><br>
-TICKETS: <%= @user.tickets %><br>
+Name:<%= @user.name %><br>
+Mood: <%= @user.mood %><br>
+Height: <%= @user.height %><br>
+Happiness: <%= @user.happiness %><br>
+Tickets: <%= @user.tickets %><br>
+<% if @user.admin %>
+<%= "ADMIN" %>
+<% end  %>

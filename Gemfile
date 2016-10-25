@@ -47,6 +47,7 @@ group :test, :development do
   gem "sqlite3"
   gem "pry"
   gem "rack_session_access"
+  gem "rb-readline"
 end
 
 group :production do
